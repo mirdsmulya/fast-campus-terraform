@@ -12,6 +12,12 @@ variable "ingress_rules" {
       to_port     = 22,
       protocol    = "tcp",
       cidr_blocks = ["1.2.3.4/32"]
+    },
+    {
+      from_port   = 443,
+      to_port     = 443,
+      protocol    = "tcp",
+      cidr_blocks = ["1.2.3.4/32"]
     }
   ]
 }
