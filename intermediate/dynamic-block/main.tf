@@ -1,6 +1,6 @@
 # main.tf
 resource "aws_security_group" "example" {
-  name = "example"
+  name = "web-server-rules"
 
   dynamic "ingress" {
     for_each = var.ingress_rules
