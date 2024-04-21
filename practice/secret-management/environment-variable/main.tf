@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "ap-southeast-1"
+}
+
 resource "aws_db_instance" "example" {
   allocated_storage    = 20
   engine               = "mysql"
@@ -11,17 +15,7 @@ resource "aws_db_instance" "example" {
 }
 
 
-variable "db_username" {
-  description = "The username for the database"
-  type        = string
-  sensitive   = true
-}
 
-variable "db_password" {
-  description = "The password for the database"
-  type        = string
-  sensitive   = true
-}
 
 
 
